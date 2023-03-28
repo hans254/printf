@@ -1,12 +1,20 @@
 #include "main.h"
+
+/**
+ * print_string - Print string
+ * @list: list.
+ *
+ * Return: String length.
+ */
+
+int print_string(va_list list)
 {
-    const unsigned char *p = (const unsigned char *) str;
-    while (*p) {
-        if (*p >= 32 && *p < 127) {
-            putchar(*p);
-        } else {
-            printf("\\x%02X", *p);
-        }
-        p++;
-    }
+	char *p;
+	int p_len;
+
+	p = va_arg(list, char*);
+	p_len = print((p != NULL) ? p : "(null)");
+
+	return (p_len);
 }
+
