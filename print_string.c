@@ -10,11 +10,3 @@
         p++;
     }
 }
-
-int main() {
-    const char *str = "Hello, world!\n\x1b[31mThis is a red text\x1b[0m.";
-    printf("String with non-printable characters: %S\n", str);
-    printf("String without special treatment: %s\n", str);
-    return 0;
-}
-
